@@ -99,6 +99,8 @@ class jamin extends BaseController
             ,'message' => ''
             ,'messageColor' => ''
             ,'messageVisibility' => ''
+            ,'productNaam' => $_GET['Naam']
+            ,'productBarcode' => $_GET['Barcode']
         ];
     
 
@@ -106,13 +108,13 @@ class jamin extends BaseController
         $allergeninfo = $this->JaminModel->getallergeninfo($ProductId);
 
 
-        if (is_null($allergeninfo)) {
+        if (empty($allergeninfo)) {
             $data['message'] = "Er is een fout opgetreden";
             $data['messageColor'] = "danger";
             $data['messageVisibility'] = "flex";
             $data['dataRows'] = NULL;
 
-            header('Refresh:3; ' . URLROOT . '/homepages/index');
+            header('Refresh:4; ' . URLROOT . '/homepages/index');
         } else {
             $data['dataRows'] = $allergeninfo;
         }
@@ -124,5 +126,4 @@ class jamin extends BaseController
         $this->view('jamin/allergeninfo', $data);
 
     }
-
 }

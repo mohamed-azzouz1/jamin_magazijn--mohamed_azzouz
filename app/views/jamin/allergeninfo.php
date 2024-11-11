@@ -4,8 +4,8 @@
         <div class="col-2"></div>
         <div class="col-8">
             <h4>overzicht Allergenen</h4>
-            <h4>Naam : <?= $data["dataRows"][0]->ProductNaam ?></h4>
-            <h4>Barcode : <?= $data["dataRows"][0]->Barcode ?></h4>
+            <h4>Naam : <?= $data["productNaam"]?></h4>
+            <h4>Barcode : <?= $data["productBarcode"] ?></h4>
 
 
             <table class="table table-hover">
@@ -17,7 +17,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    
+
                     if (is_null($data['dataRows'])) { ?>
                         <tr>
                             <td colspan='6' class='text-center'>In dit product zitten geen stoffen die een allergische reactie kunnen veroorzaken</td>
