@@ -56,6 +56,20 @@ class jamin extends BaseController
             ,'messageVisibility' => ''
         ];
 
+        $Leverantieinfo = $this->JaminModel->getLeverantieinfo();
+
+
+        if (is_null($Leverantieinfo)) {
+            $data['message'] = "Er is een fout opgetreden";
+            $data['messageColor'] = "danger";
+            $data['messageVisibility'] = "flex";
+            $data['dataRows'] = NULL;
+
+            header('Refresh:3; ' . URLROOT . '/homepages/index');
+        } else {
+            $data['dataRows'] = $Leverantieinfo;
+        }
+
         /**
          * Met de view-method uit de BaseController-class wordt de view
          * aangeroepen met de informatie uit het $data-array

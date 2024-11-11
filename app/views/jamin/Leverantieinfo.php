@@ -19,12 +19,12 @@
                             <td colspan='6' class='text-center'>Door een storing kunnen we op dit moment geen producten tonen uit het magazijn</td>
                         </tr>
                         <?php } else {
-                        foreach ($data['dataRows'] as $product) { ?>
+                        foreach ($data['dataRows'] as $Leverantieinfo) { ?>
                             <tr>
-                                <td><?= $product->naam ?></td>
-                                <td><?= $product->DatumLevering ?></td>
-                                <td><?= $product->aantal ?></td>
-                                <td><?= $product->DatumEerstVolgendeLevering ?></td> 
+                                <td><?= $Leverantieinfo->naam ?></td>
+                                <td><?= $Leverantieinfo->DatumLevering ?></td>
+                                <td><?= $Leverantieinfo->aantal ?></td>
+                                <td><?= $Leverantieinfo->DatumEerstVolgendeLevering ?></td> 
                             </tr>
                     <?php }
                     } ?>
