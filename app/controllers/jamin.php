@@ -57,7 +57,7 @@ class jamin extends BaseController
             ,'message' => ''
             ,'messageColor' => ''
             ,'messageVisibility' => ''
-            ,'productaantal' => ''
+            ,'productaantal' => $productAanwezig
         ];
     
 
