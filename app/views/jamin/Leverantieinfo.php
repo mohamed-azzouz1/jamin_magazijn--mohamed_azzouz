@@ -3,7 +3,7 @@
     <div class="row mt-3">
         <div class="col-2"></div>
         <div class="col-8">
-            <h4></h4>
+            <h4> Leverings Informatie</h4>
             <h4>Naam leverancier : <?= $data["dataRows"][0]->LeverancierNaam ?></h4>
             <h4>Contact Persoon : <?= $data["dataRows"][0]->ContactPersoon ?></h4>
             <h4>Leverancier Nummer : <?= $data["dataRows"][0]->LeverancierNummer ?></h4>

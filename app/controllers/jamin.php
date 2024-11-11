@@ -70,20 +70,16 @@ class jamin extends BaseController
             $data['messageColor'] = "danger";
             $data['messageVisibility'] = "flex";
             $data['dataRows'] = NULL;
-
-            //header('Refresh:3; ' . URLROOT . '/homepages/index');
+            header('Refresh:4; ' . URLROOT . '/homepages/index');
         } else {
             $data['dataRows'] = $Leverantieinfo;
-        }
-
-        if (is_null($productAanwezig)){
-            
         }
 
         /**
          * Met de view-method uit de BaseController-class wordt de view
          * aangeroepen met de informatie uit het $data-array
          */
+        header('Refresh:4; ' . URLROOT . '/homepages/index');
         $this->view('jamin/Leverantieinfo', $data);
     }
 

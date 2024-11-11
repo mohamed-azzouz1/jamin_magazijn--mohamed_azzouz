@@ -5,7 +5,7 @@ DROP PROCEDURE IF EXISTS spReadLeverancier;
 DELIMITER //
 
 CREATE PROCEDURE spReadLeverancier(
-    IN pId INT unsigned        -- Parameter for ProductId
+    IN pId INT unsigned       
 )
 BEGIN
     SELECT
