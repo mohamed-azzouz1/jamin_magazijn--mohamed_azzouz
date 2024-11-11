@@ -20,13 +20,13 @@
                     
                     if (is_null($data['dataRows'])) { ?>
                         <tr>
-                            <td colspan='6' class='text-center'>In dit product zitten geen stoffen die een allergische reactie kunnen veroorzaken</td>
+                            <td colspan='6' class='text-center'>In dit product zitten geen stoffen die een allergische reactie kunnen </td>
                         </tr>
                     <?php 
                     } else {
                         foreach ($data['dataRows'] as $allergeninfo) { ?>
                             <tr>
-                                <td><?= $allergeninfo->Allergeennaa ?></td>
+                                <td><?= $allergeninfo->Allergeennaam ?></td>
                                 <td><?= $allergeninfo->Omschrijving ?></td>
                             </tr>
                     <?php }
