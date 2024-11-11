@@ -85,7 +85,7 @@ class jamin extends BaseController
     }
 
     
-    public function allergeninfo($ProductId)
+    public function allergeninfo($ProductId,  $AllergeenAanwezig)
     {
         /**
          * Het $data-array geeft informatie mee aan de view-pagina
@@ -99,6 +99,7 @@ class jamin extends BaseController
             ,'message' => ''
             ,'messageColor' => ''
             ,'messageVisibility' => ''
+            ,'AllergeenAanwezig' => $AllergeenAanwezig
         ];
     
 
