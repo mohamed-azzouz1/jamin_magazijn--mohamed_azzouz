@@ -17,9 +17,9 @@ BEGIN
         ,ALLE.Omschrijving
         FROM ProductPerAllergeen as PPA
         INNER JOIN Product AS PROD
-        ON PPA.ProductId = Product.Id
+        ON PPA.ProductId = PROD.Id
         INNER JOIN Allergeen AS ALLE
-        ON PPA.AllergeenId = Allergeen.Id
+        ON PPA.AllergeenId = ALLE.Id
         WHERE PPA.ProductId = GivenProductId
 
     ORDER BY ALLE.naam ASC;
