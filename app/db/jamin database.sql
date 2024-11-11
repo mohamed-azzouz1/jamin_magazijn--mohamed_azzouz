@@ -31,9 +31,9 @@ INSERT INTO product ( naam
 
 
 create table Allergeen (
-Id 				int 			unsigned 	not null 	auto_increment
-,naam 			varchar(255) 				not null 
-,Omschrijving 	varchar(255) 		 		not null
+Id 				        int 			unsigned 	not null 	auto_increment
+,naam 			        varchar(255) 				not null 
+,Omschrijving 	        varchar(255) 		 		not null
 ,IsActief 				Bit 				not null 	default 1
 ,Opmerking 				Varchar(255) 		null 		default null
 ,DatumAangemaakt 		Datetime(6) 		not null 	default NOW(6)

@@ -1,10 +1,12 @@
-use database 'jamin_mohamed_azzouz';
+use jamin_mohamed_azzouz;
 
 DROP PROCEDURE IF EXISTS spReadJaminById;
 
 DELIMITER //
 
-CREATE PROCEDURE spReadJaminById()
+CREATE PROCEDURE spReadJaminById(
+    IN productNaam VARCHAR(255)
+)
 BEGIN
 
     SELECT 
@@ -25,3 +27,8 @@ WHERE
     p.naam = productNaam
 ORDER BY 
     ppl.DatumLevering ASC;
+
+END //
+
+DELIMITER ;
+
