@@ -43,20 +43,25 @@ class jamin extends BaseController
         $this->view('jamin/index', $data);
     }
 
-    public function Leverantieinfo()
+    public function Leverantieinfo($ProductId)
     {
         /**
          * Het $data-array geeft informatie mee aan de view-pagina
          */
         $data = [
-            'title' => 'overzicht Magazijn Jamin'
+            'naam' =>''
+            ,'DatumLevering' => ''
+            ,'aantal' => ''
+            ,'DatumEerstVolgendeLevering' => ''
             ,'dataRows' => ''
             ,'message' => ''
             ,'messageColor' => ''
             ,'messageVisibility' => ''
         ];
+    
 
-        $Leverantieinfo = $this->JaminModel->getLeverantieinfo();
+            
+        $Leverantieinfo = $this->JaminModel->getLeverantieinfo($ProductId);
 
 
         if (is_null($Leverantieinfo)) {
@@ -65,10 +70,12 @@ class jamin extends BaseController
             $data['messageVisibility'] = "flex";
             $data['dataRows'] = NULL;
 
-            header('Refresh:3; ' . URLROOT . '/homepages/index');
+            //header('Refresh:3; ' . URLROOT . '/homepages/index');
         } else {
             $data['dataRows'] = $Leverantieinfo;
         }
+
+      
 
         /**
          * Met de view-method uit de BaseController-class wordt de view

@@ -5,18 +5,18 @@ DROP PROCEDURE IF EXISTS spReadLeverancier;
 DELIMITER //
 
 CREATE PROCEDURE spReadLeverancier(
-    IN pId INT,        -- Parameter for ProductId
-    IN productNaam VARCHAR(255)   -- Parameter for Product Name
+    IN pId INT unsigned        -- Parameter for ProductId
 )
 BEGIN
-    SELECT 
-        l.naam AS LeverancierNaam,
-        l.ContactPersoon,
-        l.LeverancierNummer,
-        l.Mobiel,
-        ppl.DatumLevering,
-        ppl.Aantal,
-        ppl.DatumEerstVolgendeLevering
+    SELECT
+        p.naam as ProductNaam
+        ,l.naam AS LeverancierNaam
+        ,l.ContactPersoon
+        ,l.LeverancierNummer
+        ,l.Mobiel
+        ,ppl.DatumLevering
+        ,ppl.Aantal
+        ,ppl.DatumEerstVolgendeLevering
     FROM 
         Product p
     JOIN 
@@ -24,7 +24,7 @@ BEGIN
     JOIN 
         Leverancier l ON ppl.LeverancierId = l.Id
     WHERE 
-        p.naam = productNaam;
+        p.id = pId;
 
 END //
 

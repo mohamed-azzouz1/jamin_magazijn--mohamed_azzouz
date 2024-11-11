@@ -29,14 +29,18 @@ class MagazijnModel
             logger(__LINE__, __METHOD__, __FILE__, $e->getMessage());            
         }
     }
-    public function getLeverantieinfo()
+    public function getLeverantieinfo($Pid)
     {
         try {
             $sql = "CALL spReadLeverancier(
-                :
+                :Pid
             )";
 
             $this->db->query($sql);
+
+            $this->db->bind(':Pid', $Pid, PDO::PARAM_STR);
+          
+
 
             return $this->db->resultSet();
 

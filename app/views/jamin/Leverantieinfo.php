@@ -3,6 +3,11 @@
     <div class="row mt-3">
         <div class="col-2"></div>
         <div class="col-8">
+            <h4></h4>
+         <h4>Naam leverancier : <?= $data["dataRows"][0]->LeverancierNaam ?></h4>
+         <h4>Contact Persoon : <?= $data["dataRows"][0]->ContactPersoon ?></h4>
+         <h4>Leverancier Nummer : <?= $data["dataRows"][0]->LeverancierNummer ?></h4>
+         <h4>Mobiel : <?= $data["dataRows"][0]->Mobiel ?></h4>
 
             <table class="table table-hover">
                 <thead>
@@ -21,9 +26,9 @@
                         <?php } else {
                         foreach ($data['dataRows'] as $Leverantieinfo) { ?>
                             <tr>
-                                <td><?= $Leverantieinfo->naam ?></td>
+                                <td><?= $Leverantieinfo->ProductNaam ?></td>
                                 <td><?= $Leverantieinfo->DatumLevering ?></td>
-                                <td><?= $Leverantieinfo->aantal ?></td>
+                                <td><?= $Leverantieinfo->Aantal ?></td>
                                 <td><?= $Leverantieinfo->DatumEerstVolgendeLevering ?></td> 
                             </tr>
                     <?php }
