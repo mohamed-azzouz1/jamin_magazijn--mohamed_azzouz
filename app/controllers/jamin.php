@@ -103,7 +103,7 @@ class jamin extends BaseController
     
 
             
-        $allergeninfo = $this->JaminModel->getLeverantieinfo($ProductId);
+        $allergeninfo = $this->JaminModel->getallergeninfo($ProductId);
 
 
         if (is_null($allergeninfo)) {
@@ -122,6 +122,7 @@ class jamin extends BaseController
          * aangeroepen met de informatie uit het $data-array
          */
         $this->view('jamin/allergeninfo', $data);
+
     }
 
 }

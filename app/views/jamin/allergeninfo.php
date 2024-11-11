@@ -5,14 +5,14 @@
         <div class="col-8">
             <h4>overzicht Allergenen</h4>
             <h4>Naam : <?= $data["dataRows"][0]->ProductNaam ?></h4>
-            <h4>Barcode : <?= $data["dataRows"][0]->barcode ?></h4>
+            <h4>Barcode : <?= $data["dataRows"][0]->Barcode ?></h4>
 
 
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>Naam Product</th>
-                        <th>Datum Laatste Levering</th>
+                        <th>Omschrijving</th>
                     </tr>
                 </thead>
                 <tbody>
