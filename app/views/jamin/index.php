@@ -56,7 +56,7 @@
                                 <td><?= $product->Verpakkingseenheid ?></td>
                                 <td><?= $productAantal ?></td>
                                 <td class='text-center'>
-                                    <a href='<?= URLROOT . "/jamin/Allergeninfo/$product->ProductId" ?>'>
+                                    <a href='<?= URLROOT . "/jamin/allergeninfo/$product->ProductId" ?>'>
                                         <i class='bi bi-x-lg redcross'></i>
                                     </a>
                                 </td>
