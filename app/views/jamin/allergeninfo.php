@@ -26,7 +26,7 @@
                     } else {
                         foreach ($data['dataRows'] as $allergeninfo) { ?>
                             <tr>
-                                <td><?= $allergeninfo->Allergeennaam ?></td>
+                                <td><?= $allergeninfo->Allergeennaa ?></td>
                                 <td><?= $allergeninfo->Omschrijving ?></td>
                             </tr>
                     <?php }
