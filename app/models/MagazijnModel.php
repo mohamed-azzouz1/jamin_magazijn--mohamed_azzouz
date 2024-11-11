@@ -52,16 +52,16 @@ class MagazijnModel
         }
     }
 
-    public function getallergeninfo($Pid)
+    public function getallergeninfo($GivenProductId)
     {
         try {
-            $sql = "CALL spReadLeverancier(
-                :Pid
+            $sql = "CALL spReadAllergenen(
+                :GivenProductId
             )";
 
             $this->db->query($sql);
 
-            $this->db->bind(':Pid', $Pid, PDO::PARAM_STR);
+            $this->db->bind(':GivenProductId', $GivenProductId, PDO::PARAM_INT);
           
 
 

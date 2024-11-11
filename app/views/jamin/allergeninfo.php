@@ -4,8 +4,8 @@
         <div class="col-2"></div>
         <div class="col-8">
             <h4>overzicht Allergenen</h4>
-            <h4>Naam : <?= $data["dataRows"][0]->LeverancierNaam ?></h4>
-            <h4>Barcode : <?= $data["dataRows"][0]->Barcode ?></h4>
+            <h4>Naam : <?= $data["dataRows"][0]->ProductNaam ?></h4>
+            <h4>Barcode : <?= $data["dataRows"][0]->barcode ?></h4>
 
 
             <table class="table table-hover">
@@ -26,8 +26,8 @@
                     } else {
                         foreach ($data['dataRows'] as $allergeninfo) { ?>
                             <tr>
-                                <td><?= $allergeninfo->ProductNaam ?></td>
-                                <td><?= $allergeninfo->DatumLevering ?></td>
+                                <td><?= $allergeninfo->Allergeennaam ?></td>
+                                <td><?= $allergeninfo->Omschrijving ?></td>
                             </tr>
                     <?php }
                     } ?>

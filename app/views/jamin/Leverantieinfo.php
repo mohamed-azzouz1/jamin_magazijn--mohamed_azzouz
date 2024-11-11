@@ -30,7 +30,8 @@
                             <td colspan='6' class='bg-danger text-center '>Er is van dit product op dit moment geen voorraad aanwezig, de verwachte eerstvolgende levering is: 30-04-2023</td>
                         </tr>
                     <?php 
-                    } else {
+                                header('Refresh:4; ' . URLROOT . '/homepages/index');
+                        } else {
                         foreach ($data['dataRows'] as $Leverantieinfo) { ?>
                             <tr>
                                 <td><?= $Leverantieinfo->ProductNaam ?></td>

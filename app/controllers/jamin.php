@@ -70,7 +70,7 @@ class jamin extends BaseController
             $data['messageColor'] = "danger";
             $data['messageVisibility'] = "flex";
             $data['dataRows'] = NULL;
-            header('Refresh:4; ' . URLROOT . '/homepages/index');
+
         } else {
             $data['dataRows'] = $Leverantieinfo;
         }
@@ -79,8 +79,46 @@ class jamin extends BaseController
          * Met de view-method uit de BaseController-class wordt de view
          * aangeroepen met de informatie uit het $data-array
          */
-        header('Refresh:4; ' . URLROOT . '/homepages/index');
         $this->view('jamin/Leverantieinfo', $data);
+    }
+
+    
+    public function allergeninfo()
+    {
+        /**
+         * Het $data-array geeft informatie mee aan de view-pagina
+         */
+        $data = [
+            'naam' =>''
+            ,'DatumLevering' => ''
+            ,'aantal' => ''
+            ,'DatumEerstVolgendeLevering' => ''
+            ,'dataRows' => ''
+            ,'message' => ''
+            ,'messageColor' => ''
+            ,'messageVisibility' => ''
+        ];
+    
+
+            
+        $Leverantieinfo = $this->JaminModel->getLeverantieinfo($ProductId);
+
+
+        if (is_null($Leverantieinfo)) {
+            $data['message'] = "Er is een fout opgetreden";
+            $data['messageColor'] = "danger";
+            $data['messageVisibility'] = "flex";
+            $data['dataRows'] = NULL;
+
+        } else {
+            $data['dataRows'] = $Leverantieinfo;
+        }
+
+        /**
+         * Met de view-method uit de BaseController-class wordt de view
+         * aangeroepen met de informatie uit het $data-array
+         */
+        $this->view('jamin/allergeninfo', $data);
     }
 
 }
