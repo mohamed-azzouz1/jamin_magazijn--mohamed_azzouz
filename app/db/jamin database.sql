@@ -54,8 +54,8 @@ create table Leverancier (
 Id 					int 			unsigned 	not null auto_increment
 ,naam 				varchar(255) 				not null 
 ,ContactPersoon 	varchar(255) 		 		not null
-,LeverancierNummer  varchar(50)					not null
-,Mobiel      		varchar(20) 				not null
+,LeverancierNummer  varchar(11)					not null
+,Mobiel      		varchar(11) 				not null
 ,IsActief 			Bit 						not null 	default 1
 ,Opmerking 			Varchar(255) 				null 		default null
 ,DatumAangemaakt 	Datetime(6) 				not null 	default NOW(6)
@@ -66,11 +66,11 @@ INSERT INTO Leverancier ( naam
 ,ContactPersoon
 ,LeverancierNummer
 ,Mobiel 
-) value ( 'Venco', 'Bert van Linge', 'L1029384719', 06-28493827
-),( 'Astra Sweets', 'Jasper del Monte', 'L1029284315', 06-39398734
-),( 'Haribo', 'Sven Stalman ', 'L1029324748', 06-24383291
-),( 'Basset', 'Joyce Stelterberg', 'L1023845773', 06-48293823
-),( 'De Bron', 'Remco Veenstra ', 'L1023857736', 06-34291234
+) value ( 'Venco', 'Bert van Linge', 'L1029384719', '06-28493827'
+),( 'Astra Sweets', 'Jasper del Monte', 'L1029284315', '06-39398734'
+),( 'Haribo', 'Sven Stalman ', 'L1029324748', '06-24383291'
+),( 'Basset', 'Joyce Stelterberg', 'L1023845773', '06-48293823'
+),( 'De Bron', 'Remco Veenstra ', 'L1023857736', '06-34291234'
 );
 
 

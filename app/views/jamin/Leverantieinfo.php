@@ -21,7 +21,7 @@
                 <tbody>
                     <?php if (is_null($data['dataRows'])) { ?>
                         <tr>
-                            <td colspan='6' class='text-center'>Door een storing kunnen we op dit moment geen producten tonen uit het magazijn</td>
+                            <td colspan='6' class='text-center'>“Er is van dit product op dit moment geen voorraad aanwezig, de verwachte eerstvolgende levering is: 30-04-2023 ”</td>
                         </tr>
                         <?php } else {
                         foreach ($data['dataRows'] as $Leverantieinfo) { ?>

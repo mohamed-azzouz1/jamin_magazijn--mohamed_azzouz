@@ -24,7 +24,8 @@ BEGIN
     JOIN 
         Leverancier l ON ppl.LeverancierId = l.Id
     WHERE 
-        p.id = pId;
+        p.id = pId
+    ORDER BY ppl.DatumLevering ASC;
 
 END //
 

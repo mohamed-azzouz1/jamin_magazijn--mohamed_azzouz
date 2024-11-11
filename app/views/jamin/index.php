@@ -43,19 +43,25 @@
                                 <td colspan='6' class='text-center'>Door een storing kunnen we op dit moment geen producten tonen uit het magazijn</td>
                               </tr>
                     <?php } else {                              
-                              foreach ($data['dataRows'] as $product) { ?>
+                              foreach ($data['dataRows'] as $product) {
+                                if(is_null($product->AantalAanwezig)){
+                                    $productAantal = 0;
+                                }else{
+                                    $productAantal = $product->AantalAanwezig;
+                                }
+                                ?>
                                 <tr>
                                 <td><?= $product->Barcode ?></td>
                                 <td><?= $product->Naam ?></td>
                                 <td><?= $product->Verpakkingseenheid ?></td>
-                                <td><?= $product->AantalAanwezig ?></td>
+                                <td><?= $productAantal ?></td>
                                 <td class='text-center'>
                                     <a href='<?= URLROOT . "/jamin/Allergeninfo/$product->ProductId" ?>'>
                                         <i class='bi bi-x-lg redcross'></i>
                                     </a>
                                 </td>
                                 <td class='text-center'>
-                                    <a href='<?= URLROOT . "/jamin/Leverantieinfo/$product->ProductId" ?>'>
+                                    <a href='<?= URLROOT . "/jamin/Leverantieinfo/$product->ProductId/$productAantal" ?>'>
                                         <i class='bi bi-question-lg darkbluequestionmark'></i>
                                     </a>
                                 </td>            

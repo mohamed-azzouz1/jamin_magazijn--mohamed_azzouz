@@ -43,7 +43,7 @@ class jamin extends BaseController
         $this->view('jamin/index', $data);
     }
 
-    public function Leverantieinfo($ProductId)
+    public function Leverantieinfo($ProductId, $productAanwezig)
     {
         /**
          * Het $data-array geeft informatie mee aan de view-pagina
@@ -57,6 +57,7 @@ class jamin extends BaseController
             ,'message' => ''
             ,'messageColor' => ''
             ,'messageVisibility' => ''
+            ,'productaantal' => ''
         ];
     
 
@@ -75,7 +76,9 @@ class jamin extends BaseController
             $data['dataRows'] = $Leverantieinfo;
         }
 
-      
+        if (is_null($productAanwezig)){
+            
+        }
 
         /**
          * Met de view-method uit de BaseController-class wordt de view
