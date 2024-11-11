@@ -11,8 +11,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Naam Product</th>
-                        <th>Omschrijving</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -20,7 +19,7 @@
                     
                     if (is_null($data['dataRows'])) { ?>
                         <tr>
-                            <td colspan='6' class='text-center'>In dit product zitten geen stoffen die een allergische reactie kunnen </td>
+                            <td colspan='6' class='text-center'>In dit product zitten geen stoffen die een allergische reactie kunnen veroorzaken</td>
                         </tr>
                     <?php 
                     } else {
