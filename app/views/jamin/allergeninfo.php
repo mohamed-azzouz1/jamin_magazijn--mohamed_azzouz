@@ -35,7 +35,7 @@
             </table>
             <a href="<?= URLROOT; ?>/homepages/index">Homepage</a>
         </div>
-        <div class="col-2">was</div>
+        <div class="col-2"></div>
     </div>
 </div>
 <?php require_once APPROOT . '/views/includes/footer.php'; ?>
