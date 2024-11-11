@@ -11,7 +11,8 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-
+                        <th>Naam Product</th>
+                        <th>Omschrijving</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,7 +35,7 @@
             </table>
             <a href="<?= URLROOT; ?>/homepages/index">Homepage</a>
         </div>
-        <div class="col-2"></div>
+        <div class="col-2">was</div>
     </div>
 </div>
 <?php require_once APPROOT . '/views/includes/footer.php'; ?>
